@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Currículo Digital</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
@@ -17,10 +19,16 @@
         <section id="sobre">
             <h2>Sobre Mim</h2>
             <div class="sobre-container">
-                <img src="media/foto.jpg" alt="Uma foto profissional de [Seu Nome]" class="foto-perfil">
+                <figure>
+                    <img src="media/Thigas.JPG" alt="Uma foto profissional de [Seu Nome]" class="foto-perfil">
+                    <figcaption id="nome-legenda" style="text-align: center; font-style: italic; margin-top: 5px;">[Seu Nome],
+                        Desenvolvedor(a) Web</figcaption>
+                </figure>
                 <article>
                     <h3>Minha Jornada</h3>
-                    <p>Aqui você pode escrever um parágrafo sobre sua trajetória, seus interesses na área de tecnologia, seus objetivos de carreira e o que você está aprendendo atualmente. Seja pessoal e autêntico!</p>
+                    <p>Aqui você pode escrever um parágrafo sobre sua trajetória, seus interesses na área de tecnologia,
+                        seus objetivos de carreira e o que você está aprendendo atualmente. Seja pessoal e autêntico!
+                    </p>
                 </article>
             </div>
         </section>
@@ -35,21 +43,24 @@
                 <li>Acessibilidade Web</li>
             </ul>
         </section>
-        
+
         <section id="interatividade">
             <h2>Interaja Comigo</h2>
             <button id="btn-saudacao">Clique para uma saudação!</button>
-            
+
             <div class="campo-form">
                 <label for="nome-input">Digite seu nome:</label>
                 <input type="text" id="nome-input" placeholder="Seu nome aqui">
                 <button id="btn-personalizar">Personalizar Título</button>
             </div>
 
-            <button id="btn-toggle">Mostrar/Esconder Detalhes</button>
-            <article id="secao-oculta" class="detalhes-ocultos">
+            <button id="btn-toggle" aria-expanded="false" aria-controls="secao-oculta">
+                Mostrar Detalhes Adicionais
+            </button>
+            <article id="secao-oculta" class="detalhes-ocultos" role="region" aria-labelledby="btn-toggle">
                 <h4>Detalhes Adicionais</h4>
-                <p>Esta é uma seção que pode ser exibida ou ocultada com JavaScript. É ótima para mostrar informações complementares, como um projeto específico ou uma experiência de trabalho detalhada.</p>
+                <p>Esta é uma seção que pode ser exibida ou ocultada com JavaScript. É ótima para mostrar informações
+                    complementares, como um projeto específico ou uma experiência de trabalho detalhada.</p>
             </article>
         </section>
 
@@ -81,11 +92,11 @@
             <button type="submit">Salvar Contatos</button>
         </form>
         <div class="links-sociais" id="links-sociais" style="display:none;">
-            <!-- Links serão inseridos pelo JS -->
-        </div>
+            </div>
         <p class="copyright">&copy; 2025 - Desenvolvido por [Seu Nome].</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
